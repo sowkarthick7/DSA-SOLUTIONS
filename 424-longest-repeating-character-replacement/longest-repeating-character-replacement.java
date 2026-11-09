@@ -7,7 +7,7 @@ class Solution {
         for(int i=0;i<s.length();i++){
             freq[s.charAt(i)-'A']++;
             maxfreq=Math.max(maxfreq,freq[s.charAt(i)-'A']);
-            while((i-l+1-maxfreq)>k){
+            if((i-l+1-maxfreq)>k){
                 freq[s.charAt(l)-'A']--;
                 l++;
             }
